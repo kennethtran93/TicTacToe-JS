@@ -1,10 +1,10 @@
 ### Drag & Drop Tic-Tac-Toe with JavaScript
 
-1:  Kenneth Tran
-2:  Vithusan Kanageswaran
+1.  Kenneth Tran
+2.  Vithusan Kanageswaran
 
 ##### What has been completed
-Tic-Tac-Toe Game using JavaScript
+* Tic-Tac-Toe Game using JavaScript
 
 ##### Basic Minimum
 * disabled/prevent drop when image is already in box
