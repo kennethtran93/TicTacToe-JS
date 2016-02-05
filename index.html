@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Drag &amp; Drop Tic-Tac-Toe with JavaScript By Tran, Kenneth &amp; Kanageswaran, Vithusan</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="styles/TicTacToe.css" />
+	<script type="text/javascript" src="js/TicTacToe.js"></script>
+</head>
+<body onload="startUp()" class="noselect">
+	<header>
+		<h2>A Game of Tic-Tac-Toe using JavaScript</h2>
+	</header>
+	<noscript>
+		<p>ERROR - Game cannot be loaded!</p>
+		<p>This is becuase JavaScript is disabled.</p>
+		<p>This page requires JavaScript to function properly.</p>
+		<p>Please enable JavaScript and refresh this page to continue.</p>
+	</noscript>
+	<div id="content" hidden="hidden">
+		<p id="status"></p>
+		<p id="pop" onClick="popClick()" hidden="hidden">Enable / Disable JavaScript Prompts<br /><span id="popBGhint">Red = Disabled, Green = Enabled (Default)</span>
+		</p>
+		<div id="preGame" hidden="hidden">
+			<p id="formNote">&#126; &#126; &#126; All Fields Required &#126; &#126; &#126;</p>
+			<p id="formError" hidden="hidden">Error List</p>
+			<ul id="errorList"></ul>
+			<div id="p1Form">
+				<fieldset>
+					<legend>Player 1 Settings</legend>
+					<label for="p1Name" id="p1NameLabel">Name</label>
+					<input type="text" id="p1Name" name="p1Name" placeholder="Player 1 Name" required/>
+					<br />
+					<label for="p1Sign" id="p1SignLabel">Zodiac #</label>
+					<input type="text" id="p1Sign" name="p1Sign" value="4" size="2" maxlength="2" onInput="signColor(event)" onChange="signColor(event)" onFocus="signColor(event)" onBlur= "signColor(event)" required/>
+					<span id="p1SignLabel1" class="zodiacInfo">( See table below )</span>
+				</fieldset>
+			</div>
+			<div id="p2Form">
+				<fieldset>
+					<legend>Player 2 Settings</legend>
+					<label for="p2Name" id="p2NameLabel">Name</label>
+					<input type="text" id="p2Name" name="p2Name" placeholder="Player 2 Name" required/>
+					<br />
+					<label for="p2Sign" id="p2SignLabel">Zodiac #</label>
+					<input type="text" id="p2Sign" name="p2Sign" value="5" size="2" maxlength="2" onInput="signColor(event)" onChange="signColor(event)" onFocus="signColor(event)" onBlur= "signColor(event)" required/>
+					<span id="p2SignLabel1" class="zodiacInfo">( See table below )</span>
+				</fieldset>
+			</div>
+			<div class="clear"></div>
+			<div id="sign-list">
+				<table>
+					<caption>Zodiac Animal Signs</caption>
+					<thead>
+						<tr>
+							<th id="s1" class="notSelected">1</th>
+							<th id="s2" class="notSelected">2</th>
+							<th id="s3" class="notSelected">3</th>
+							<th id="s4" class="notSelected">4</th>
+							<th id="s5" class="notSelected">5</th>
+							<th id="s6" class="notSelected">6</th>
+							<th id="s7" class="notSelected">7</th>
+							<th id="s8" class="notSelected">8</th>
+							<th id="s9" class="notSelected">9</th>
+							<th id="s10" class="notSelected">10</th>
+							<th id="s11" class="notSelected">11</th>
+							<th id="s12" class="notSelected">12</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td id="s1a" class="notSelected">Dog</td>
+							<td id="s2a" class="notSelected">Dragon</td>
+							<td id="s3a" class="notSelected">Goat</td>
+							<td id="s4a" class="notSelected">Horse</td>
+							<td id="s5a" class="notSelected">Monkey</td>
+							<td id="s6a" class="notSelected">Ox</td>
+							<td id="s7a" class="notSelected">Pig</td>
+							<td id="s8a" class="notSelected">Rabbit</td>
+							<td id="s9a" class="notSelected">Rat</td>
+							<td id="s10a" class="notSelected">Rooster</td>
+							<td id="s11a" class="notSelected">Snake</td>
+							<td id="s12a" class="notSelected">Tiger</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<br />
+			<button type="submit" id="formSubmit" onMouseOver="buttonHoverIn()" onClick="validateOpt()" onMouseOut="buttonHoverOut()">Ready?</button>
+		</div>
+		<div id="game" hidden="hidden">
+			<p>
+				<button id="reload" onMouseOver="buttonColorIn(event)" onClick="reload()" onMouseOut="buttonColorOut(event)">New Game / Refresh Page / Clear Stats</button>
+				<span id="twoButtons" hidden="hidden">&#126; &#126; &#126; OR &#126; &#126; &#126;</span>
+				<button id="newRound" onMouseOver="buttonColorIn(event)" onClick="newRound()" onMouseOut="buttonColorOut(event)" hidden="hidden">Next / New Round</button>
+			</p>
+			<p id="stats">Current Round:&nbsp;&nbsp;<span id="rounds">0</span>&nbsp;&nbsp;|&nbsp;&nbsp;Ties:&nbsp;&nbsp;<span id="tie">0</span></p>
+			<div id="gameArea">
+				<div id="img1area">
+					<div class="score"><span id="sign1">Horse</span><br />Score<br /><span id="xWin">0</span></div>
+					<img id="img1" class="img1" src="images/Horse.png" alt="Image1 - Horse" draggable="true" ondragstart="drag(event)"/>
+					<div class="name">Player 1</div>
+				</div>
+				<table id="grid">
+					<tr>
+						<td id="b1" class="box noselect" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)"></td>
+						<td id="b2" class="box noselect" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)"></td>
+						<td id="b3" class="box noselect" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)"></td>
+					</tr>
+					<tr>
+						<td id="b4" class="box noselect" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)"></td>
+						<td id="b5" class="box noselect" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)"></td>
+						<td id="b6" class="box noselect" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)"></td>
+					</tr>
+					<tr>
+						<td id="b7" class="box noselect" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)"></td>
+						<td id="b8" class="box noselect" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)"></td>
+						<td id="b9" class="box noselect" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)"></td>
+					</tr>
+				</table>
+				<div id="img2area">
+					<div class="score"><span id="sign2">Monkey</span><br />Score<Br /><span id="yWin">0</span></div>
+					<img id="img2" class="img2" src="images/Monkey.png" alt="Image2 - Monkey" draggable="true" ondragstart="drag(event)" />
+					<div class="name">Player 2</div>
+				</div>
+				<div class="clear"></div>
+				<p id="name1"></p>
+				<p id="name2"></p>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<p id="load"></p>
+		<hr />
+		<p id="credit">
+			Kenneth Tran (A00813080), Set 1A<br />
+			Vithusan Kanageswaran (A00896235), Set 1A
+		</p>
+	</div>
+</body>
+</html>

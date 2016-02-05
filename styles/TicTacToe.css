@@ -1,0 +1,249 @@
+/* Assignment 3 - Drag & Drop Tic-Tac-Toe with JavaScript */
+
+body {
+	background-image: url(../images/backgrounds/notebook.png);
+	background-attachment: fixed;
+	font-family: Arial, san-serif;
+	text-align: center;
+}
+
+header {
+	display: block;
+	font-weight: bold;
+}
+
+.clear {
+	clear: both;
+}
+
+#content {
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+noscript {
+	font-size: 2em;
+	font-weight: bold;
+	color: red;
+}
+
+#welcome {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+#formNote, #formError {
+	margin: 0.5em;
+	font-weight: bold;
+	font-size: 1.25em;
+	color: red;
+}
+
+#formError, #errorList {
+	color: red;
+	text-align: left;
+}
+
+#statusFormError {
+	color: red;
+}
+
+legend {
+    font-weight: bold;
+    padding-bottom: .5em;
+}
+
+label {
+    float: left;
+    width: 5em;
+    text-align: right;
+}
+
+input {
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.zodiacInfo {
+	font-size: 0.75em;
+}
+
+#p1Form, #p2Form {
+	text-align: left;
+	height: 110px;
+	width: 295px;
+	float: left;
+	margin-bottom: 10px;
+}
+
+#p1Form > fieldset {
+	background: #FFFFCC;
+}
+
+#p2Form > fieldset{
+	background: #FFCCCC;
+}
+
+#sign-list table{
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#sign-list table, #sign-list table tbody tr td, #sign-list table thead tr th {
+	padding: 4px;
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+#formSubmit {
+	width: 10em;
+	height: 2em;
+	font-size: 1.25em;
+	font-weight: bold;
+}
+
+.center {
+	text-align: center;
+}
+
+#stats {
+	margin-top: 0.25em;
+	margin-bottom: 0.25em;
+	font-size: 1.25em;
+	font-variant: small-caps;
+}
+
+#pop {
+	width: 350px;
+	margin-top: 0.25em;
+	margin-bottom: 0.25em;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+	font-size: 1em;
+	text-transform: uppercase;
+	border-style: solid;
+	border-width: thin;
+	background-color: #99CC66;
+	cursor: pointer;
+}
+
+#popBGhint {
+	font-size: .8em;
+	font-weight: bold;
+}
+
+#rounds, #tie {
+	font-weight: bold;
+}
+
+#gameArea {
+	display: inline-block;
+	height: 350px;
+}
+
+#img1area, #img2area {
+	position: relative;
+	height: 320px;
+	width: 110px;
+	float: left;
+}
+
+.score{
+	position: absolute;
+	width: 110px;
+	font-size: 1.25em;
+	font-variant: small-caps;
+}
+
+#xWin, #yWin {
+	font-weight: bold;
+	font-size: 2em;
+}
+
+.name {
+	position: absolute;
+	bottom: 5px;
+	width: 110px;
+	text-decoration: underline;
+	font-size: 1.25em;
+	font-variant: small-caps;
+}
+
+#name1, #name2 {
+	font-weight: bold;
+	font-size: 1.25em;
+	margin: 5px;
+}
+
+#name1 {
+	float: left;
+	padding-left: 12px;
+}
+
+#name2 {
+	float: right;
+	padding-right: 12px;
+}
+
+.img1, .img2 {
+	position: relative;
+	top: 110px;
+	height: 100px;
+	width: 100px;
+}
+
+.img1, .sign1 {
+	background: #FFFF00;
+}
+
+.img2, .sign2 {
+	background: #FF0000;
+}
+
+.sameSign{ 
+	background: #FF8000;
+}
+
+.notSelected{
+	background: transparent;
+}
+
+#grid {
+	width: 310px;
+	height: 320px;
+	float: left;
+	border: 2px solid #aaaaaa;
+	border-collapse: collapse;
+}
+
+.box {
+	width: 101px;
+	height: 104px;
+	border: 2px solid #aaaaaa;
+	background-color: transparent;
+	padding: 0;
+}
+
+#status {
+	background: #C8C8C8;
+	padding: 0.5em;
+}
+
+.fade {
+	opacity: 0.25;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+#credit {
+	text-align: right;
+}
