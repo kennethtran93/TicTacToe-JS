@@ -1,5 +1,7 @@
 ### Drag & Drop Tic-Tac-Toe with JavaScript
 
+*This was created for ACIT 1620 - Assignment 03 @ BCIT*
+
 1.  Kenneth Tran
 2.  Vithusan Kanageswaran
 
