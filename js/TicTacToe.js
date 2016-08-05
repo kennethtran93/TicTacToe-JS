@@ -26,7 +26,7 @@ var SignNames = new Array(
 // used in onLoad of page
 function startUp() {
     window.statusBar = document.getElementById("status");
-    document.getElementById("load").innerHTML = "This page was loaded on: " + document.lastModified;
+    document.getElementById("load").innerHTML = "Your browser loaded this page on: " + Date() + "<br />This page was last modified on: " + document.lastModified;
     document.getElementById("content").removeAttribute("hidden");
     preGame();
 }
