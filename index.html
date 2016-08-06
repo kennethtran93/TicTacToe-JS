@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <html>
 <head>
 	<title>Drag &amp; Drop Tic-Tac-Toe with JavaScript By Tran, Kenneth &amp; Kanageswaran, Vithusan</title>
@@ -100,23 +100,19 @@
 					<img id="img1" class="img1" src="images/Horse.png" alt="Image1 - Horse" draggable="true" ondragstart="drag(event)"/>
 					<div class="name">Player 1</div>
 				</div>
-				<table id="grid">
-					<tr>
-						<td id="b1" class="box noselect" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)"></td>
-						<td id="b2" class="box noselect" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)"></td>
-						<td id="b3" class="box noselect" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)"></td>
-					</tr>
-					<tr>
-						<td id="b4" class="box noselect" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)"></td>
-						<td id="b5" class="box noselect" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)"></td>
-						<td id="b6" class="box noselect" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)"></td>
-					</tr>
-					<tr>
-						<td id="b7" class="box noselect" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)"></td>
-						<td id="b8" class="box noselect" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)"></td>
-						<td id="b9" class="box noselect" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)"></td>
-					</tr>
-				</table>
+				<div id="grid">
+						<div id="b1" class="box noselect" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)"></div>
+						<div id="b2" class="box noselect" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)"></div>
+						<div id="b3" class="box noselect" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)"></div>
+						<div class="clear"></div>
+						<div id="b4" class="box noselect" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)"></div>
+						<div id="b5" class="box noselect" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)"></div>
+						<div id="b6" class="box noselect" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)"></div>
+						<div class="clear"></div>
+						<div id="b7" class="box noselect" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)"></div>
+						<div id="b8" class="box noselect" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)"></div>
+						<div id="b9" class="box noselect" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)"></div>
+				</div>
 				<div id="img2area">
 					<div class="score"><span id="sign2">Monkey</span><br />Score<Br /><span id="yWin">0</span></div>
 					<img id="img2" class="img2" src="images/Monkey.png" alt="Image2 - Monkey" draggable="true" ondragstart="drag(event)" />
@@ -131,8 +127,8 @@
 		<p id="load"></p>
 		<hr />
 		<p id="credit">
-			Kenneth Tran (A00813080), Set 1A<br />
-			Vithusan Kanageswaran (A00896235), Set 1A
+            Tic-Tac-Toe game collaboratively developed by<br />
+            <b>Kenneth Tran</b> &amp; <b>Vithusan Kanageswaran</b>
 		</p>
 	</div>
 </body>
